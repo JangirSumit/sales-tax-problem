@@ -24,20 +24,28 @@ namespace SalesTaxProblem
                 var name = Console.ReadLine();
 
                 Console.WriteLine("Price : ");
-                var price = Console.ReadLine();
+                if (!decimal.TryParse(Console.ReadLine(), out decimal price))
+                {
+                    throw new Exception("Invalid price");
+                }
 
                 Console.WriteLine("Quantity : ");
-                var quantity = Console.ReadLine();
+                if (!int.TryParse(Console.ReadLine(), out int quantity))
+                {
+                    throw new Exception("Invalid quantity");
+                }
 
-                Console.WriteLine("Is imported : (Y/N)");
+                Console.WriteLine("Is imported : (Y/N) [any other key except y/Y is considered as N]");
                 var isImported = Console.ReadLine().ToLower() == "y" ? true : false;
 
                 Console.WriteLine("Type of Item (select one of below)\n1. Book\n2. Food\n3. Medical\n4. Other");
-                var type = Convert.ToInt32(Console.ReadLine());
-                GoodsType goodsType = (GoodsType)type;
 
+                if (!Enum.TryParse<GoodsType>(Console.ReadLine(), out GoodsType goodsType))
+                {
+                    throw new Exception("Invalid type");
+                }
 
-                Console.WriteLine("Do you want to add more items? (Y/N)");
+                Console.WriteLine("Do you want to add more items? (Y/N) [any other key except y/Y is considered as N]");
                 var input = Console.ReadLine().ToLower();
 
                 var product = productFactory.GetProduct(name, Convert.ToDecimal(price), Convert.ToInt32(quantity), goodsType, isImported);
@@ -62,7 +70,7 @@ namespace SalesTaxProblem
 
             foreach (var item in cartItems)
             {
-                Console.WriteLine(item.Name + " (" + item.Quantity + ")" + "    "
+                Console.WriteLine(item.Name + " (" + item.Quantity + ")" + "                    "
                                             + item.Price + "    "
                                             + item.IsImported + "   "
                                             + item.CalculateTax());
