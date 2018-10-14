@@ -39,7 +39,7 @@ namespace SalesTaxProblem
                 tax = Convert.ToDecimal(Convert.ToDouble(Price * Quantity) * 0.05);
             }
 
-            return tax;
+            return Math.Round(tax, 2);
         }
     }
 
@@ -85,7 +85,7 @@ namespace SalesTaxProblem
 
             var salesTax = Convert.ToDecimal(Convert.ToDouble(Price * Quantity) * 0.1);
 
-            return importedTax + salesTax;
+            return Math.Round(importedTax + salesTax, 2);
         }
     }
 }

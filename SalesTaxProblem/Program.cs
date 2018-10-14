@@ -8,7 +8,7 @@ namespace SalesTaxProblem
     {
         static void Main(string[] args)
         {
-            var productFactory = new ProductFactory();
+            IProductFactory productFactory = new ProductFactory();
             List<Product> cartItems = new List<Product>();
             int count = 0;
 
