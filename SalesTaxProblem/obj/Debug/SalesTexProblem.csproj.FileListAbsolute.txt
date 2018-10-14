@@ -1,0 +1,7 @@
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\obj\Debug\SalesTexProblem.csprojAssemblyReference.cache
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\obj\Debug\SalesTexProblem.csproj.CoreCompileInputs.cache
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\bin\Debug\SalesTexProblem.exe.config
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\bin\Debug\SalesTexProblem.exe
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\bin\Debug\SalesTexProblem.pdb
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\obj\Debug\SalesTexProblem.exe
+C:\Users\sjangir\source\repos\SalesTexProblem\SalesTexProblem\obj\Debug\SalesTexProblem.pdb
